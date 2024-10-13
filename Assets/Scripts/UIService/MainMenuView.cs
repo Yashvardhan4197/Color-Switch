@@ -17,6 +17,7 @@ public class MainMenuView : MonoBehaviour
     private void StartGame()
     {
         //Game Start Action;
+        GameService.Instance.StartGame?.Invoke();
         mainMenuController.DisableComponent(canvasGroup);
     }
 
