@@ -6,9 +6,15 @@ using UnityEngine;
 public class GameService : GenericMonoSingleton<GameService>
 {
     //View
-
+    [SerializeField] MainMenuView mainMenuView;
+    [SerializeField] ScoreView scoreView;
     //Services
-    //[SerializeField] UIService UIService;
+    public UIService UIService { get; set;}
     //[SerializeField] PlayerService PlayerService;
-    
+
+    private void Start()
+    {
+        UIService=new UIService(mainMenuView,scoreView);
+    }
+
 }
