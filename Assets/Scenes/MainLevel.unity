@@ -400,7 +400,7 @@ MonoBehaviour:
   mainMenuView: {fileID: 1353779596}
   scoreView: {fileID: 133320132}
   playerView: {fileID: 490222453}
-  StartPostion: {fileID: 1738862638}
+  StartPostion: {fileID: 0}
   gameStarted: 0
 --- !u!1 &918297630
 GameObject:
