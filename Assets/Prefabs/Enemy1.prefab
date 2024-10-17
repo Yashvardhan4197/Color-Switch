@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6049342787792411607}
   m_Layer: 0
   m_Name: Big Circle_1
-  m_TagString: Untagged
+  m_TagString: YELLOW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 5907553150481543233}
   m_Layer: 0
   m_Name: Big Circle_3
-  m_TagString: Untagged
+  m_TagString: PURPLE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 998494044265907633}
   m_Layer: 0
   m_Name: Big Circle_0
-  m_TagString: Untagged
+  m_TagString: BLUE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 7049892321565600384}
   m_Layer: 0
   m_Name: Big Circle_2
-  m_TagString: Untagged
+  m_TagString: RED
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

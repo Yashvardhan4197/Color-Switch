@@ -50,6 +50,11 @@ public class PlayerView : MonoBehaviour
         if (collision.tag != playerController.GetCurrentTag())
         {
             Debug.Log("GameOVER");
+            return;
+        }
+        if(collision.tag=="POINT")
+        {
+            GameService.Instance.UIService.GetUIController().IncrementScore();
         }
 
     }

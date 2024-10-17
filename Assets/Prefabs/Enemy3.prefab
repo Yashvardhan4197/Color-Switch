@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5192097925075987655}
   m_Layer: 0
   m_Name: Disc1
-  m_TagString: Untagged
+  m_TagString: BLUE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 8204851146102646835}
   m_Layer: 0
   m_Name: Disc3
-  m_TagString: Untagged
+  m_TagString: PURPLE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 5028937657534565736}
   m_Layer: 0
   m_Name: Disc2
-  m_TagString: Untagged
+  m_TagString: YELLOW
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1798884538085697837}
   m_Layer: 0
   m_Name: Disc4
-  m_TagString: Untagged
+  m_TagString: RED
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
