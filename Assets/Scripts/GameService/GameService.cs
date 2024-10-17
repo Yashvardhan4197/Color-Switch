@@ -8,6 +8,7 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] MainMenuView mainMenuView;
     [SerializeField] ScoreView scoreView;
     [SerializeField] PlayerView playerView;
+    [SerializeField] GameObject StartPostion;
     //Services
     public UIService UIService { get; set;}
     public PlayerService PlayerService { get; set;}
@@ -27,6 +28,8 @@ public class GameService : GenericMonoSingleton<GameService>
     public void OnGameStart()
     {
         gameStarted = true;
+        playerView.gameObject.SetActive(true);
+        playerView.gameObject.transform.position = StartPostion.transform.position;
     }
 
     private void OnDestroy()

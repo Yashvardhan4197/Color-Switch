@@ -10,6 +10,7 @@ TagManager:
   - YELLOW
   - POINT
   - BOTTOM
+  - CHANGER
   layers:
   - Default
   - TransparentFX

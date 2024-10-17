@@ -14,10 +14,11 @@ public class PlayerController
     {
         this.playerView = playerView;
         GameService.Instance.StartGame += EnableCanvasGroup;
+        GameService.Instance.StartGame += ChangeColor;
         playerView.SetController(this);
+        spriteRenderer = playerView.GetSpriteRenderer();
         playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
-        spriteRenderer=playerView.GetSpriteRenderer();
     }
 
     public void EnableCanvasGroup()
@@ -47,6 +48,7 @@ public class PlayerController
     ~PlayerController()
     {
         GameService.Instance.StartGame -= EnableCanvasGroup;
+        GameService.Instance.StartGame-= ChangeColor;
     }
 
     public void ChangeColor()
@@ -54,9 +56,12 @@ public class PlayerController
         int random = UnityEngine.Random.Range(0, playerStateMachine.TotalStates());
         ColorStates colorState = (ColorStates)random;
         playerStateMachine.ChangeState(colorState);
+        Debug.Log(playerStateMachine.currentState.tag);
         spriteRenderer.color = playerStateMachine.currentState.color;
     }
 
     public string GetCurrentTag() => playerStateMachine.currentState.tag;
+
+    public Transform GetPlayerTransform()=>playerView.gameObject.transform;
 }
 

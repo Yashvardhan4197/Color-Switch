@@ -17,7 +17,7 @@ public class PurpleState : IState
     public void OnStateEnter()
     {
         tag = "PURPLE";
-        color = new Color(160,32,240);
+        color = new Color(0.5f, 0f, 0.5f);
         //throw new System.NotImplementedException();
     }
 

@@ -16,7 +16,7 @@ public class YellowState : IState
     public void OnStateEnter()
     {
         tag = "YELLOW";
-        Color color = Color.yellow;
+        color = Color.yellow;
         //row new System.NotImplementedException();
     }
 
