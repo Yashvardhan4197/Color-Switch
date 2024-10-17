@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class UIService
 {
-    private UIController mainMenuController;
+    private UIController UIController;
 
     public UIService(MainMenuView mainMenuView,ScoreView scoreView)
     {
-        mainMenuController = new UIController(mainMenuView, scoreView);
+        UIController = new UIController(mainMenuView, scoreView);
     }
 
-    public UIController GetMainMenuController() => mainMenuController;
+    public UIController GetUIController() => UIController;
 
 
 
