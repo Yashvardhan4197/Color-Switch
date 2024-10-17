@@ -9,6 +9,7 @@ public class PlayerController
     private PlayerStateMachine playerStateMachine;
     private bool firstJump = true;
     private Rigidbody2D rb2D;
+    private SpriteRenderer spriteRenderer;
     public PlayerController(PlayerView playerView)
     {
         this.playerView = playerView;
@@ -16,6 +17,7 @@ public class PlayerController
         playerView.SetController(this);
         playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
+        spriteRenderer=playerView.GetSpriteRenderer();
     }
 
     public void EnableCanvasGroup()
@@ -47,11 +49,14 @@ public class PlayerController
         GameService.Instance.StartGame -= EnableCanvasGroup;
     }
 
-    public void RandomizeState()
+    public void ChangeColor()
     {
         int random = UnityEngine.Random.Range(0, playerStateMachine.TotalStates());
         ColorStates colorState = (ColorStates)random;
         playerStateMachine.ChangeState(colorState);
+        spriteRenderer.color = playerStateMachine.currentState.color;
     }
+
+    public string GetCurrentTag() => playerStateMachine.currentState.tag;
 }
 

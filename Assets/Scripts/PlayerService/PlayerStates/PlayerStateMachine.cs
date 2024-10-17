@@ -5,7 +5,7 @@ public class PlayerStateMachine
 {
     private PlayerController Owner;
     private Dictionary<ColorStates,IState> states=new Dictionary<ColorStates, IState>();
-    private IState currentState;
+    public IState currentState;
     public PlayerStateMachine(PlayerController controller)
     {
         Owner = controller;

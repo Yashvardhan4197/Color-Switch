@@ -1,8 +1,12 @@
 ﻿
+using UnityEngine;
+
 public class YellowState : IState
 {
-    public PlayerController Owner { get; set; }
     private PlayerStateMachine stateMachine;
+    public PlayerController Owner { get; set; }
+    public string tag { get; set; }
+    public Color color { get; set; }
 
     public YellowState(PlayerStateMachine stateMachine)
     {
@@ -11,6 +15,8 @@ public class YellowState : IState
 
     public void OnStateEnter()
     {
+        tag = "YELLOW";
+        Color color = Color.yellow;
         //row new System.NotImplementedException();
     }
 

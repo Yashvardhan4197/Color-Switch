@@ -1,8 +1,13 @@
 ﻿
+using TMPro;
+using UnityEngine;
+
 public class RedState : IState
 {
     public PlayerController Owner { get; set; }
     private PlayerStateMachine stateMachine;
+    public string tag { get; set; }
+    public Color color { get; set; }
 
     public RedState(PlayerStateMachine stateMachine)
     {
@@ -11,7 +16,8 @@ public class RedState : IState
 
     public void OnStateEnter()
     {
-       
+        tag = "RED";
+        color = Color.red;
     }
 
     public void OnStateExit()

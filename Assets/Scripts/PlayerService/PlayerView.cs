@@ -8,6 +8,7 @@ public class PlayerView : MonoBehaviour
     [SerializeField] Rigidbody2D rb2D;
     [SerializeField] float JumpSpeed;
     [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] SpriteRenderer spriteRenderer;
     private void Start()
     {
         rb2D.gravityScale = 0f;
@@ -34,14 +35,27 @@ public class PlayerView : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy"))
+        if(collision.tag== "CHANGER")
         {
             //GameService Game Over;
-            Debug.Log("Game Over");
+            playerController.ChangeColor();
+            return;
         }
+        
+        if(collision.tag=="BOTTOM")
+        {
+            Debug.Log("GAMEOVER");
+            return;
+        }
+        if (collision.tag != playerController.GetCurrentTag())
+        {
+            Debug.Log("GameOVER");
+        }
+
     }
 
     public CanvasGroup GetCanvasGroup() { return canvasGroup; }
 
     public float GetJumpSpeed() => JumpSpeed;
+    public SpriteRenderer GetSpriteRenderer()=> spriteRenderer;
 }   
