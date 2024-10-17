@@ -20,6 +20,7 @@ public class GameService : GenericMonoSingleton<GameService>
     {
         UIService=new UIService(mainMenuView,scoreView);
         PlayerService=new PlayerService(playerView);
+        //Remember to DestroyExtraObjects
         StartGame += OnGameStart;
     }
 
