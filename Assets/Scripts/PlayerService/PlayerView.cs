@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerView : MonoBehaviour
 {
-    private bool firstJump;
+    private PlayerController playerController;
     [SerializeField] Rigidbody2D rb2D;
     [SerializeField] float JumpSpeed;
     [SerializeField] CanvasGroup canvasGroup;
     private void Start()
     {
-        firstJump = true;
         rb2D.gravityScale = 0f;
         canvasGroup.interactable = false;
     }
@@ -19,24 +18,18 @@ public class PlayerView : MonoBehaviour
     {
         if (GameService.Instance.gameStarted == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
 
-              PerformJump();
+              playerController?.PerformJump();
 
             }
         }
     }
 
-    private void PerformJump()
+    public void SetController(PlayerController playerController)
     {
-        if(firstJump)
-        {
-            firstJump=false;
-            rb2D.gravityScale = 2;
-        }
-
-        rb2D.velocity = JumpSpeed * Vector3.up;
+        this.playerController = playerController;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,4 +43,5 @@ public class PlayerView : MonoBehaviour
 
     public CanvasGroup GetCanvasGroup() { return canvasGroup; }
 
-}
+    public float GetJumpSpeed() => JumpSpeed;
+}   
