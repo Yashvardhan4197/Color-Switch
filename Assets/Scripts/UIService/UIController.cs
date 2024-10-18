@@ -31,6 +31,9 @@ public class UIController
             PlayerPrefs.SetInt("HighScore",HighScore);
         }
     }
+
+    public int GetCurrentScore() => score;
+
     public void DisableComponent(CanvasGroup canvasGroup)
     {
         canvasGroup.alpha = 0f;

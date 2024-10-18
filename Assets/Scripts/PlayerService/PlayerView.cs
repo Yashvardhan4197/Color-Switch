@@ -39,6 +39,7 @@ public class PlayerView : MonoBehaviour
         {
             //GameService Game Over;
             playerController.ChangeColor();
+            Destroy(collision.gameObject);
             return;
         }
         
@@ -47,14 +48,16 @@ public class PlayerView : MonoBehaviour
             Debug.Log("GAMEOVER");
             return;
         }
+        if (collision.tag == "POINT")
+        {
+            GameService.Instance.UIService.GetUIController().IncrementScore();
+            Destroy(collision.gameObject);
+            return;
+        }
         if (collision.tag != playerController.GetCurrentTag())
         {
             Debug.Log("GameOVER");
             return;
-        }
-        if(collision.tag=="POINT")
-        {
-            GameService.Instance.UIService.GetUIController().IncrementScore();
         }
 
     }
