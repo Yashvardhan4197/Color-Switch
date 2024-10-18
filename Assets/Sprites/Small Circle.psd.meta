@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,616 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Small Circle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 577
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9626978bc120148a91c32e5d7e8cf4
+      internalID: 1097241093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 577
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c64a6064046dd046b7b48ddfcba798e
+      internalID: 1625401037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_2
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 536
+        width: 41
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efebf470d8d00d24080ef43cc30cec89
+      internalID: 686366495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_3
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 515
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4930be2d153c8744ea81cea22db6e8e7
+      internalID: 1325709217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 371
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a732682fdce1e1742ab68a3ba2a9ab17
+      internalID: -125757385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 371
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175bb2620df7cd84e932de38f4ea9060
+      internalID: 1828224740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 494
+        width: 187
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f362490424bce104fa8f6a585d114e76
+      internalID: -1172756161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 493
+        width: 187
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08eb7f112eb7cc54a80f7c61fdc8a543
+      internalID: -1230554257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_8
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 307
+        width: 41
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99f4d127fde90c4fb64f163478e275d
+      internalID: 1894289215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_9
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 357
+        width: 105
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7bdd4ffe1369946a61d7998a6276aa
+      internalID: 1675524191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 41
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84424bda92236e4c90a1234c40429fa
+      internalID: -2023782717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_11
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 41
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d556e5f3bb7f24fbac69ae8418f151
+      internalID: 912496076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_12
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 41
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccba35c028785f048ba02126ad9fff68
+      internalID: -773867972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_13
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 41
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f88d736f9fbfd54e9f827fb2054d362
+      internalID: 1861755350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_14
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 155
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274baaf4666202249a3fca77add657c6
+      internalID: -1290439093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_15
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 155
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cba8c8335a8034bb623baf3018eb40
+      internalID: 139598385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 169
+        width: 66
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ba185e93e34cb46adc1e4a7302df09
+      internalID: -358148342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_17
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 169
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77adc1c3e75974140bd6530d40abd77f
+      internalID: 308580809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_18
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 169
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f718f930ee8fd64e90f1bdaa4981a16
+      internalID: -1665476248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_19
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 169
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85daf37765ec0e43b6fd83519a4786f
+      internalID: -2069999088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_20
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 169
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afb5e296a18d374183ddc3db549959a
+      internalID: -1466869623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_21
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 40
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840f8aabde131704da9f1dc9e358a17b
+      internalID: -1504254078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_22
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 40
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd86a21699143648a2aa916252a029b
+      internalID: -918069685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_23
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 25
+        width: 59
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9461f440e206be944b7f2db105407be7
+      internalID: -2005327681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_24
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 25
+        width: 119
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719b3a1ae6436834db8da6265bbf9bbd
+      internalID: -1340176967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_25
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 25
+        width: 34
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce53ba9dd687e24cb77e86d59b12e46
+      internalID: -113672855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_26
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 25
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459d34a599c9ac940852e8d6a0388700
+      internalID: -1125635217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_27
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 24
+        width: 66
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd5e12faa46f8d428b81e35ca5f5cb9
+      internalID: 442397116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Small Circle_28
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 25
+        width: 74
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9531ed74f2d334ab8247d3e78bf713
+      internalID: 1493641886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +754,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Small Circle_0: 1097241093
+      Small Circle_1: 1625401037
+      Small Circle_10: -2023782717
+      Small Circle_11: 912496076
+      Small Circle_12: -773867972
+      Small Circle_13: 1861755350
+      Small Circle_14: -1290439093
+      Small Circle_15: 139598385
+      Small Circle_16: -358148342
+      Small Circle_17: 308580809
+      Small Circle_18: -1665476248
+      Small Circle_19: -2069999088
+      Small Circle_2: 686366495
+      Small Circle_20: -1466869623
+      Small Circle_21: -1504254078
+      Small Circle_22: -918069685
+      Small Circle_23: -2005327681
+      Small Circle_24: -1340176967
+      Small Circle_25: -113672855
+      Small Circle_26: -1125635217
+      Small Circle_27: 442397116
+      Small Circle_28: 1493641886
+      Small Circle_3: 1325709217
+      Small Circle_4: -125757385
+      Small Circle_5: 1828224740
+      Small Circle_6: -1172756161
+      Small Circle_7: -1230554257
+      Small Circle_8: 1894289215
+      Small Circle_9: 1675524191
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
