@@ -8,11 +8,13 @@ public class UIController
     private ScoreView scoreView;
     private int score;
     private int HighScore;
-    public UIController(MainMenuView mainMenuView,ScoreView scoreView)
+    public UIController(MainMenuView mainMenuView,ScoreView scoreView,GameOverMenuView gameOverView)
     {
         this.mainMenuView = mainMenuView;
         this.scoreView = scoreView;
         mainMenuView.SetController(this);
+        gameOverView.SetControlller(this);
+        DisableComponent(gameOverView.GetCanvasGroup());
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
@@ -41,4 +43,10 @@ public class UIController
         canvasGroup.interactable = false;
     }
 
+    public void EnableComponent(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.interactable = true;
+    }
 }

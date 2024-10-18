@@ -12,10 +12,19 @@ public class EnemySpawnerController
         enemyView.SetController(this);
         this.obstacles = obstacles;
         GameService.Instance.StartGame += OnGameStart;
+        GameService.Instance.RestartGame += OnGameStart;
     }
 
     public void OnGameStart()
     {
+        GameObject[] ObjectsToDestroy = GameObject.FindGameObjectsWithTag("ENEMY");
+
+        for(int i=0;i<ObjectsToDestroy.Length;i++)
+        {
+            enemyView.DestroyEnemy(ObjectsToDestroy[i]);
+        }
+
+
         GameObject obstacle=obstacles[Random.Range(0, obstacles.Length)];
         GameObject obstacle2 = obstacles[Random.Range(0, obstacles.Length)];
         SpawnObstacles(obstacle,obstacle2);

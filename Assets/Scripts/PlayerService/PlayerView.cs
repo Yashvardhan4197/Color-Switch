@@ -21,8 +21,7 @@ public class PlayerView : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
-
-              playerController?.PerformJump();
+                playerController?.PerformJump();
 
             }
         }
@@ -46,6 +45,7 @@ public class PlayerView : MonoBehaviour
         if(collision.tag=="BOTTOM")
         {
             Debug.Log("GAMEOVER");
+            GameService.Instance.StopGame?.Invoke();
             return;
         }
         if (collision.tag == "POINT")
@@ -56,7 +56,7 @@ public class PlayerView : MonoBehaviour
         }
         if (collision.tag != playerController.GetCurrentTag())
         {
-            Debug.Log("GameOVER");
+            playerController.GameOver();
             return;
         }
 

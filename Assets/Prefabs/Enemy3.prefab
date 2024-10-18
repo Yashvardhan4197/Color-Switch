@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 765210171601806897}
   m_Layer: 0
   m_Name: Enemy3
-  m_TagString: Untagged
+  m_TagString: ENEMY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8811003f55cb94345a4825eb3a03f4e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 3
+  RotateSpeed: 1
 --- !u!212 &765210171601806897
 SpriteRenderer:
   m_ObjectHideFlags: 0

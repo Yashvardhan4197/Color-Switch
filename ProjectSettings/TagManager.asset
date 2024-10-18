@@ -11,6 +11,7 @@ TagManager:
   - POINT
   - BOTTOM
   - CHANGER
+  - ENEMY
   layers:
   - Default
   - TransparentFX

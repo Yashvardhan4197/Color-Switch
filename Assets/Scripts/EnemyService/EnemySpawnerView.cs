@@ -16,6 +16,10 @@ public class EnemySpawnerView : MonoBehaviour
         enemyController?.Update();
     }
 
+    public void DestroyEnemy(GameObject target)
+    {
+        Destroy(target);
+    }
 
     
 }

@@ -19,6 +19,7 @@ public class PlayerController
         spriteRenderer = playerView.GetSpriteRenderer();
         playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
+        GameService.Instance.RestartGame += OnGameRestart;
     }
 
     public void EnableCanvasGroup()
@@ -49,6 +50,7 @@ public class PlayerController
     {
         GameService.Instance.StartGame -= EnableCanvasGroup;
         GameService.Instance.StartGame-= ChangeColor;
+        GameService.Instance.RestartGame -= OnGameRestart;
     }
 
     public void ChangeColor()
@@ -63,5 +65,20 @@ public class PlayerController
     public string GetCurrentTag() => playerStateMachine.currentState.tag;
 
     public Transform GetPlayerTransform()=>playerView.gameObject.transform;
+
+    public void GameOver()
+    {
+        rb2D.velocity = Vector2.zero;
+        rb2D.gravityScale = 0;
+        firstJump = true;
+        GameService.Instance.StopGame?.Invoke();
+    }
+
+    public void OnGameRestart()
+    {
+        rb2D.velocity = Vector2.zero;
+        rb2D.gravityScale = 0;
+        firstJump = true;
+    }
 }
 
