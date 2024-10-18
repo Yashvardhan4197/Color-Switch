@@ -8,19 +8,26 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] MainMenuView mainMenuView;
     [SerializeField] ScoreView scoreView;
     [SerializeField] PlayerView playerView;
-    [SerializeField] GameObject StartPostion;
+    [SerializeField] EnemySpawnerView enemySpawnerView;
     //Services
     public UIService UIService { get; set;}
     public PlayerService PlayerService { get; set;}
+    public EnemySpawnerService EnemySpawnerService { get; set;}
 
     //Action
     public UnityAction StartGame;
     public bool gameStarted = false;
 
+    //Data
+    [SerializeField] public GameObject StartPostion;
+    [SerializeField] GameObject[] Obstacles;
+    [SerializeField] public GameObject ColorChanger;
+
     private void Start()
     {
         UIService=new UIService(mainMenuView,scoreView);
         PlayerService=new PlayerService(playerView);
+        EnemySpawnerService = new EnemySpawnerService(enemySpawnerView,Obstacles);
         //Remember to DestroyExtraObjects
         StartGame += OnGameStart;
     }
