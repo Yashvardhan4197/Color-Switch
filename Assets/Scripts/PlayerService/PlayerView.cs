@@ -1,5 +1,4 @@
 
-using System;
 using UnityEngine;
 
 public class PlayerView : MonoBehaviour
@@ -9,6 +8,7 @@ public class PlayerView : MonoBehaviour
     [SerializeField] float JumpSpeed;
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject particleTrail;
     private void Start()
     {
         rb2D.gravityScale = 0f;
@@ -19,25 +19,18 @@ public class PlayerView : MonoBehaviour
     {
         if (GameService.Instance.gameStarted == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0))
             {
-
-              playerController?.PerformJump();
+                playerController?.PerformJump();
 
             }
         }
-    }
-
-    public void SetController(PlayerController playerController)
-    {
-        this.playerController = playerController;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag== "CHANGER")
         {
-            //GameService Game Over;
             playerController.ChangeColor();
             Destroy(collision.gameObject);
             return;
@@ -46,6 +39,7 @@ public class PlayerView : MonoBehaviour
         if(collision.tag=="BOTTOM")
         {
             Debug.Log("GAMEOVER");
+            GameService.Instance.StopGame?.Invoke();
             return;
         }
         if (collision.tag == "POINT")
@@ -56,14 +50,22 @@ public class PlayerView : MonoBehaviour
         }
         if (collision.tag != playerController.GetCurrentTag())
         {
-            Debug.Log("GameOVER");
+            playerController.GameOver();
             return;
         }
 
     }
 
+    public void SetController(PlayerController playerController)
+    {
+        this.playerController = playerController;
+    }
+
     public CanvasGroup GetCanvasGroup() { return canvasGroup; }
 
     public float GetJumpSpeed() => JumpSpeed;
+
     public SpriteRenderer GetSpriteRenderer()=> spriteRenderer;
+
+    public GameObject GetParticleSystem() => particleTrail;
 }   

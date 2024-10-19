@@ -10,15 +10,24 @@ public class PlayerController
     private bool firstJump = true;
     private Rigidbody2D rb2D;
     private SpriteRenderer spriteRenderer;
+    public GameObject particleTrail;
     public PlayerController(PlayerView playerView)
     {
         this.playerView = playerView;
+        SpawnParticleSystem();
         GameService.Instance.StartGame += EnableCanvasGroup;
         GameService.Instance.StartGame += ChangeColor;
         playerView.SetController(this);
         spriteRenderer = playerView.GetSpriteRenderer();
         playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
+        GameService.Instance.RestartGame += OnGameRestart;
+    }
+
+    private void SpawnParticleSystem()
+    {
+        Debug.Log("ParticleSystemSpawned");
+        particleTrail = GameObject.Instantiate(playerView.GetParticleSystem(), playerView.gameObject.transform);
     }
 
     public void EnableCanvasGroup()
@@ -49,6 +58,7 @@ public class PlayerController
     {
         GameService.Instance.StartGame -= EnableCanvasGroup;
         GameService.Instance.StartGame-= ChangeColor;
+        GameService.Instance.RestartGame -= OnGameRestart;
     }
 
     public void ChangeColor()
@@ -63,5 +73,22 @@ public class PlayerController
     public string GetCurrentTag() => playerStateMachine.currentState.tag;
 
     public Transform GetPlayerTransform()=>playerView.gameObject.transform;
+
+    public void GameOver()
+    {
+        rb2D.velocity = Vector2.zero;
+        rb2D.gravityScale = 0;
+        firstJump = true;
+        GameService.Instance.StopGame?.Invoke();
+    }
+
+    public void OnGameRestart()
+    {
+        rb2D.velocity = Vector2.zero;
+        rb2D.gravityScale = 0;
+        firstJump = true;
+        GameObject.Destroy(particleTrail);
+        SpawnParticleSystem();
+    }
 }
 

@@ -1,5 +1,4 @@
 ﻿
-using TMPro;
 using UnityEngine;
 
 public class RedState : IState
@@ -17,7 +16,14 @@ public class RedState : IState
     public void OnStateEnter()
     {
         tag = "RED";
-        color = Color.red;
+        color = new Color(1f, 0, 0.4882569f);
+        ChangeColor(color);
+    }
+
+    private void ChangeColor(Color color)
+    {
+        var mainModule = Owner.particleTrail.GetComponent<ParticleSystem>().main;
+        mainModule.startColor = color;
     }
 
     public void OnStateExit()
