@@ -6,12 +6,14 @@ public class UIController
 {
     private MainMenuView mainMenuView;
     private ScoreView scoreView;
+    private GameOverMenuView GameOverMenuView;
     private int score;
     private int HighScore;
     public UIController(MainMenuView mainMenuView,ScoreView scoreView,GameOverMenuView gameOverView)
     {
         this.mainMenuView = mainMenuView;
         this.scoreView = scoreView;
+        GameOverMenuView = gameOverView;
         mainMenuView.SetController(this);
         gameOverView.SetControlller(this);
         DisableComponent(gameOverView.GetCanvasGroup());
@@ -25,6 +27,12 @@ public class UIController
         this.score += score;
         scoreView.GetScoreText().text = this.score.ToString();
     }
+
+    public void UpdateHighScore()
+    {
+        GameOverMenuView.GetHighScoreText().text = HighScore.ToString();
+    }
+
     public void IncrementScore()
     {
         score++;
@@ -37,6 +45,7 @@ public class UIController
     }
 
     public int GetCurrentScore() => score;
+    public int GetHighScore()=>HighScore;
 
     public void DisableComponent(CanvasGroup canvasGroup)
     {
@@ -56,6 +65,7 @@ public class UIController
     {
         score = 0;
         UpdateScore(score);
+        UpdateHighScore();
     }
     ~UIController()
     {
