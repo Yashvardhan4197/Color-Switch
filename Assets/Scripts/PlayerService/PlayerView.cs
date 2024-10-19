@@ -38,7 +38,6 @@ public class PlayerView : MonoBehaviour
         
         if(collision.tag=="BOTTOM")
         {
-            Debug.Log("GAMEOVER");
             GameService.Instance.StopGame?.Invoke();
             return;
         }

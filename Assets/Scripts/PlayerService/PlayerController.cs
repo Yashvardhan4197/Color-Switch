@@ -26,7 +26,6 @@ public class PlayerController
 
     private void SpawnParticleSystem()
     {
-        Debug.Log("ParticleSystemSpawned");
         particleTrail = GameObject.Instantiate(playerView.GetParticleSystem(), playerView.gameObject.transform);
     }
 

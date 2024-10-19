@@ -11,7 +11,6 @@ public class EnemyDestroyer : MonoBehaviour
         }
         if (collision.tag == "Player")
         {
-            //Start OnGameEND LOGIC
             GameService.Instance.StopGame?.Invoke();
         }
     }
