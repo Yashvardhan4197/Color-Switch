@@ -1,5 +1,5 @@
 # COLOR-SWITCH
-This is a Color Switch clone built using Unity with clean, scalable architecture and design patterns.
+This is a Color Switch Game built using Unity with clean, scalable architecture and design patterns.
 ---
 
 ## Features
