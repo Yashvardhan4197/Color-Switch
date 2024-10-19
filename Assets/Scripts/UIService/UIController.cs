@@ -16,6 +16,8 @@ public class UIController
         gameOverView.SetControlller(this);
         DisableComponent(gameOverView.GetCanvasGroup());
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
+        GameService.Instance.StartGame += OnGameStart;
+        GameService.Instance.RestartGame += OnGameStart;
     }
 
     public void UpdateScore(int score)
@@ -48,5 +50,16 @@ public class UIController
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.interactable = true;
+    }
+
+    public void OnGameStart()
+    {
+        score = 0;
+        UpdateScore(score);
+    }
+    ~UIController()
+    {
+        GameService.Instance.StartGame -= OnGameStart;
+        GameService.Instance.RestartGame -= OnGameStart;
     }
 }

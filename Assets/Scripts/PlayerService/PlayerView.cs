@@ -9,6 +9,7 @@ public class PlayerView : MonoBehaviour
     [SerializeField] float JumpSpeed;
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject particleTrail;
     private void Start()
     {
         rb2D.gravityScale = 0f;
@@ -19,7 +20,7 @@ public class PlayerView : MonoBehaviour
     {
         if (GameService.Instance.gameStarted == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0))
             {
                 playerController?.PerformJump();
 
@@ -66,4 +67,5 @@ public class PlayerView : MonoBehaviour
 
     public float GetJumpSpeed() => JumpSpeed;
     public SpriteRenderer GetSpriteRenderer()=> spriteRenderer;
+    public GameObject GetParticleSystem() => particleTrail;
 }   

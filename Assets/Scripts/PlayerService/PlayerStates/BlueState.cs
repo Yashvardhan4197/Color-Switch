@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 
 public class BlueState : IState
@@ -16,8 +17,15 @@ public class BlueState : IState
     public void OnStateEnter()
     {
         tag = "BLUE";
-        color= Color.blue;
+        color= Color.cyan;
+        ChangeColor(color);
         //throw new System.NotImplementedException();
+    }
+
+    private void ChangeColor(Color color)
+    {
+        var mainModule=Owner.particleTrail.GetComponent<ParticleSystem>().main;
+        mainModule.startColor = color;
     }
 
     public void OnStateExit()

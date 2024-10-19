@@ -12,7 +12,6 @@ public class EnemyDestroyer : MonoBehaviour
         if(collision.transform.parent != null)
         {
             Destroy(collision.transform.parent.gameObject);
-            Debug.Log("Enemy-Destroyed");
         }
         if (collision.tag == "Player")
         {

@@ -17,7 +17,14 @@ public class YellowState : IState
     {
         tag = "YELLOW";
         color = Color.yellow;
+        ChangeColor(color);
         //row new System.NotImplementedException();
+    }
+
+    private void ChangeColor(Color color)
+    {
+        var mainModule = Owner.particleTrail.GetComponent<ParticleSystem>().main;
+        mainModule.startColor = color;
     }
 
     public void OnStateExit()

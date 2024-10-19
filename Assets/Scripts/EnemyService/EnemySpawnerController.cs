@@ -28,6 +28,7 @@ public class EnemySpawnerController
         GameObject obstacle=obstacles[Random.Range(0, obstacles.Length)];
         GameObject obstacle2 = obstacles[Random.Range(0, obstacles.Length)];
         SpawnObstacles(obstacle,obstacle2);
+        counter = 1;
     }
 
     private void SpawnObstacles(GameObject obstacle, GameObject obstacle2)
@@ -48,7 +49,7 @@ public class EnemySpawnerController
     {
         if(GameService.Instance.UIService.GetUIController().GetCurrentScore()>counter)
         {
-            
+            Debug.Log("EnemySpawning");
             int place = 1;
             Object.Instantiate(GameService.Instance.ColorChanger, new Vector3(GameService.Instance.StartPostion.transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
             place++;

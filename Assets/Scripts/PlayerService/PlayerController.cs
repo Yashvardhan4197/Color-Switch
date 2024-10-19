@@ -10,9 +10,11 @@ public class PlayerController
     private bool firstJump = true;
     private Rigidbody2D rb2D;
     private SpriteRenderer spriteRenderer;
+    public GameObject particleTrail;
     public PlayerController(PlayerView playerView)
     {
         this.playerView = playerView;
+        SpawnParticleSystem();
         GameService.Instance.StartGame += EnableCanvasGroup;
         GameService.Instance.StartGame += ChangeColor;
         playerView.SetController(this);
@@ -20,6 +22,12 @@ public class PlayerController
         playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
         GameService.Instance.RestartGame += OnGameRestart;
+    }
+
+    private void SpawnParticleSystem()
+    {
+        Debug.Log("ParticleSystemSpawned");
+        particleTrail = GameObject.Instantiate(playerView.GetParticleSystem(), playerView.gameObject.transform);
     }
 
     public void EnableCanvasGroup()
@@ -79,6 +87,8 @@ public class PlayerController
         rb2D.velocity = Vector2.zero;
         rb2D.gravityScale = 0;
         firstJump = true;
+        GameObject.Destroy(particleTrail);
+        SpawnParticleSystem();
     }
 }
 
