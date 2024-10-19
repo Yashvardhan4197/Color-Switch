@@ -1,5 +1,4 @@
 
-using System;
 using UnityEngine;
 
 public class PlayerView : MonoBehaviour
@@ -28,16 +27,10 @@ public class PlayerView : MonoBehaviour
         }
     }
 
-    public void SetController(PlayerController playerController)
-    {
-        this.playerController = playerController;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag== "CHANGER")
         {
-            //GameService Game Over;
             playerController.ChangeColor();
             Destroy(collision.gameObject);
             return;
@@ -63,9 +56,16 @@ public class PlayerView : MonoBehaviour
 
     }
 
+    public void SetController(PlayerController playerController)
+    {
+        this.playerController = playerController;
+    }
+
     public CanvasGroup GetCanvasGroup() { return canvasGroup; }
 
     public float GetJumpSpeed() => JumpSpeed;
+
     public SpriteRenderer GetSpriteRenderer()=> spriteRenderer;
+
     public GameObject GetParticleSystem() => particleTrail;
 }   

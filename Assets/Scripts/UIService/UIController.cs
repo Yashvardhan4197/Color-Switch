@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class UIController
@@ -9,6 +8,7 @@ public class UIController
     private GameOverMenuView GameOverMenuView;
     private int score;
     private int HighScore;
+
     public UIController(MainMenuView mainMenuView,ScoreView scoreView,GameOverMenuView gameOverView)
     {
         this.mainMenuView = mainMenuView;
@@ -45,6 +45,7 @@ public class UIController
     }
 
     public int GetCurrentScore() => score;
+
     public int GetHighScore()=>HighScore;
 
     public void DisableComponent(CanvasGroup canvasGroup)
@@ -67,9 +68,11 @@ public class UIController
         UpdateScore(score);
         UpdateHighScore();
     }
+
     ~UIController()
     {
         GameService.Instance.StartGame -= OnGameStart;
         GameService.Instance.RestartGame -= OnGameStart;
     }
+
 }

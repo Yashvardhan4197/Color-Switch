@@ -10,12 +10,11 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] PlayerView playerView;
     [SerializeField] GameOverMenuView gameOverMenuView;
     [SerializeField] EnemySpawnerView enemySpawnerView;
+
     //Services
     public UIService UIService { get; set;}
     public PlayerService PlayerService { get; set;}
     public EnemySpawnerService EnemySpawnerService { get; set;}
-
-    //public VFXService VFXService { get; set;}
 
     //Action
     public UnityAction StartGame;
@@ -28,14 +27,12 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] GameObject[] Obstacles;
     [SerializeField] public GameObject ColorChanger;
     [SerializeField] BoxCollider2D ground;
-    //[SerializeField] VFXSO VFX_data;
 
     private void Start()
     {
         UIService=new UIService(mainMenuView,scoreView, gameOverMenuView);
         PlayerService=new PlayerService(playerView);
         EnemySpawnerService = new EnemySpawnerService(enemySpawnerView,Obstacles);
-        //VFXService = new VFXService(VFX_data);
         StartGame += OnGameStart;
         RestartGame += OnGameRestart;
         StopGame += OnGameStop;

@@ -18,7 +18,6 @@ public class YellowState : IState
         tag = "YELLOW";
         color = Color.yellow;
         ChangeColor(color);
-        //row new System.NotImplementedException();
     }
 
     private void ChangeColor(Color color)
@@ -29,12 +28,12 @@ public class YellowState : IState
 
     public void OnStateExit()
     {
-        //throw new System.NotImplementedException();
+
     }
 
     public void Update()
     {
-        //throw new System.NotImplementedException();
+
     }
 }
 

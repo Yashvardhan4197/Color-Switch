@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,15 +16,20 @@ public class GameOverMenuView : MonoBehaviour
         GameService.Instance.StopGame += OpenMenu;
     }
 
-    public void SetControlller(UIController controller)
+    private void OnDestroy()
     {
-        UIController = controller;
+        GameService.Instance.StopGame -= OpenMenu;
     }
 
     private void RestartGame()
     {
         GameService.Instance.RestartGame?.Invoke();
         UIController.DisableComponent(canvasGroup);
+    }
+
+    public void SetControlller(UIController controller)
+    {
+        UIController = controller;
     }
 
     public void OpenMenu()
@@ -35,11 +39,6 @@ public class GameOverMenuView : MonoBehaviour
     }
 
     public CanvasGroup GetCanvasGroup() => canvasGroup;
-
-    private void OnDestroy()
-    {
-        GameService.Instance.StopGame -= OpenMenu;
-    }
 
     public TextMeshProUGUI GetHighScoreText()=> HighScore;
 }

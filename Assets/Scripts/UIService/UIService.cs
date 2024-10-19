@@ -1,6 +1,4 @@
 
-using UnityEngine;
-
 public class UIService
 {
     private UIController UIController;
@@ -11,8 +9,5 @@ public class UIService
     }
 
     public UIController GetUIController() => UIController;
-
-
-
 
 }
