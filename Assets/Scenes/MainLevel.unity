@@ -797,6 +797,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 918297634}
     m_Modifications:
+    - target: {fileID: 160053904230257064, guid: 1066d6af42580c24fafef2deeb0382ce, type: 3}
+      propertyPath: RotateSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 566968491036192454, guid: 1066d6af42580c24fafef2deeb0382ce, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1003,6 +1007,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 918297634}
     m_Modifications:
+    - target: {fileID: 666417643059125769, guid: 3607aa67954574b4f8e79f27cb232d09, type: 3}
+      propertyPath: RotateSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3067404805505398555, guid: 3607aa67954574b4f8e79f27cb232d09, type: 3}
       propertyPath: m_Name
       value: MainMenu

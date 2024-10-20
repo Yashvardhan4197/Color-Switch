@@ -10,7 +10,7 @@ public class RotatorManager : MonoBehaviour
     {
         if (direction == Direction.LEFT)
         {
-            transform.Rotate(0, 0, RotateSpeed);
+            transform.Rotate(0, 0, RotateSpeed*Time.deltaTime);
         }
         else
         {
