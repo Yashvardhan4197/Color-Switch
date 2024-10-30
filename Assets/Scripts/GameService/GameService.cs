@@ -30,6 +30,7 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] GameObject[] Obstacles;
     [SerializeField] GameObject ColorChanger;
     [SerializeField] BoxCollider2D ground;
+    [SerializeField] ColorDataSO[] colorDatas;
 
     private void Start()
     {
@@ -74,4 +75,10 @@ public class GameService : GenericMonoSingleton<GameService>
     public bool CheckIfGameStarted() => gameStarted;
 
     public void SetCheckGameStarted(bool change)=> gameStarted = change;
+
+    public ColorDataSO GetRandomColor()
+    {
+        ColorDataSO colorData= colorDatas[Random.Range(0,colorDatas.Length)];
+        return colorData;
+    }
 }

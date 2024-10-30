@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 7612995621733480348}
   - component: {fileID: 8969984935476482029}
   - component: {fileID: 5192097925075987655}
+  - component: {fileID: 5529339839860417062}
   m_Layer: 0
   m_Name: Disc1
   m_TagString: BLUE
@@ -258,6 +259,19 @@ PolygonCollider2D:
       - {x: -0.225, y: -0.125}
       - {x: -0.13499999, y: 0.005}
   m_UseDelaunayMesh: 0
+--- !u!114 &5529339839860417062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845943350878187411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: 562ca992324f4184392aba9e3211c766, type: 2}
 --- !u!1 &7818527031624431123
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +283,7 @@ GameObject:
   - component: {fileID: 2638796245788786498}
   - component: {fileID: 816031161754692755}
   - component: {fileID: 8204851146102646835}
+  - component: {fileID: 5173865770382234572}
   m_Layer: 0
   m_Name: Disc3
   m_TagString: PURPLE
@@ -411,6 +426,19 @@ PolygonCollider2D:
       - {x: -0.305, y: -0.765}
       - {x: -0.175, y: -0.715}
   m_UseDelaunayMesh: 0
+--- !u!114 &5173865770382234572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818527031624431123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: fdf105c1df14bb647bbab22eb0b8fe5a, type: 2}
 --- !u!1 &7900924659926909536
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +450,7 @@ GameObject:
   - component: {fileID: 3488988501148657168}
   - component: {fileID: 3192576922081954400}
   - component: {fileID: 5028937657534565736}
+  - component: {fileID: 2617418956768991739}
   m_Layer: 0
   m_Name: Disc2
   m_TagString: YELLOW
@@ -564,6 +593,19 @@ PolygonCollider2D:
       - {x: 0.825, y: -0.565}
       - {x: 0.815, y: -0.49499997}
   m_UseDelaunayMesh: 0
+--- !u!114 &2617418956768991739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900924659926909536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: 63c15cd2c3b508647a14568cda5f0e33, type: 2}
 --- !u!1 &8946109270192333016
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +617,7 @@ GameObject:
   - component: {fileID: 686480487907318126}
   - component: {fileID: 1236657995849248120}
   - component: {fileID: 1798884538085697837}
+  - component: {fileID: 5533757452816648822}
   m_Layer: 0
   m_Name: Disc4
   m_TagString: RED
@@ -719,6 +762,19 @@ PolygonCollider2D:
       - {x: 0.825, y: -0.445}
       - {x: 0.445, y: -0.385}
   m_UseDelaunayMesh: 0
+--- !u!114 &5533757452816648822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946109270192333016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: a12c235689e3d0044b94050b47aa5f05, type: 2}
 --- !u!1001 &6014761855812594684
 PrefabInstance:
   m_ObjectHideFlags: 0

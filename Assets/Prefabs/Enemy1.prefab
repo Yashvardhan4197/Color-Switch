@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2348375351144317594}
   - component: {fileID: 6061875360097663444}
   - component: {fileID: 6049342787792411607}
+  - component: {fileID: 7592218641119795961}
   m_Layer: 0
   m_Name: Big Circle_1
   m_TagString: YELLOW
@@ -237,6 +238,19 @@ PolygonCollider2D:
       - {x: 1.375, y: -0.955}
       - {x: 1.345, y: -0.745}
   m_UseDelaunayMesh: 0
+--- !u!114 &7592218641119795961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570802484216982350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: 63c15cd2c3b508647a14568cda5f0e33, type: 2}
 --- !u!1 &3964244822006431195
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +262,7 @@ GameObject:
   - component: {fileID: 8931339747036959672}
   - component: {fileID: 6323064067343550274}
   - component: {fileID: 5907553150481543233}
+  - component: {fileID: 9147350325692492273}
   m_Layer: 0
   m_Name: Big Circle_3
   m_TagString: PURPLE
@@ -471,6 +486,19 @@ PolygonCollider2D:
       - {x: -0.715, y: -0.26999998}
       - {x: -0.465, y: -0.14999999}
   m_UseDelaunayMesh: 0
+--- !u!114 &9147350325692492273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964244822006431195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: fdf105c1df14bb647bbab22eb0b8fe5a, type: 2}
 --- !u!1 &4784941805920298527
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +510,7 @@ GameObject:
   - component: {fileID: 6023025653357395532}
   - component: {fileID: 7191884248791129510}
   - component: {fileID: 998494044265907633}
+  - component: {fileID: 243395446973947666}
   m_Layer: 0
   m_Name: Big Circle_0
   m_TagString: BLUE
@@ -710,6 +739,19 @@ PolygonCollider2D:
       - {x: 0.03, y: -1.2049999}
       - {x: 0.07, y: -0.995}
   m_UseDelaunayMesh: 0
+--- !u!114 &243395446973947666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784941805920298527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: 562ca992324f4184392aba9e3211c766, type: 2}
 --- !u!1 &5695005502178712445
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +763,7 @@ GameObject:
   - component: {fileID: 8928668989012531539}
   - component: {fileID: 2696415904128842265}
   - component: {fileID: 7049892321565600384}
+  - component: {fileID: 5392277828716742948}
   m_Layer: 0
   m_Name: Big Circle_2
   m_TagString: RED
@@ -942,6 +985,19 @@ PolygonCollider2D:
       - {x: 1.375, y: 0.005}
       - {x: 1.095, y: 0.035}
   m_UseDelaunayMesh: 0
+--- !u!114 &5392277828716742948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5695005502178712445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400541f230c93894596c59aef0a14b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorData: {fileID: 11400000, guid: a12c235689e3d0044b94050b47aa5f05, type: 2}
 --- !u!1 &6325884551796268913
 GameObject:
   m_ObjectHideFlags: 0

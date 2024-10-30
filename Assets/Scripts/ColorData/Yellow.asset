@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f60ecb336f8524b81609de7e44f2a3, type: 3}
-  m_Name: VFX_Set
+  m_Script: {fileID: 11500000, guid: c7784b67921d7ed4585303a656f218db, type: 3}
+  m_Name: Yellow
   m_EditorClassIdentifier: 
-  vFXDatas:
-  - state: 0
-    particleSystem: {fileID: 0}
-  - state: 0
-    particleSystem: {fileID: 0}
-  - state: 0
-    particleSystem: {fileID: 0}
+  ColorName: Yellow
+  color: {r: 1, g: 0.9284386, b: 0, a: 1}

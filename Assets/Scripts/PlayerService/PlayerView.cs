@@ -4,12 +4,13 @@ using UnityEngine;
 public class PlayerView : MonoBehaviour
 {
     private PlayerController playerController;
+    
     [SerializeField] Rigidbody2D rb2D;
     [SerializeField] float JumpSpeed;
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] GameObject particleTrail;
-    private void Start()
+    private void Start() 
     {
         rb2D.gravityScale = 0f;
         canvasGroup.interactable = false;
@@ -29,25 +30,28 @@ public class PlayerView : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag== "CHANGER")
+        if(collision.gameObject.GetComponent<EnemyView>()==null)
         {
-            playerController.ChangeColor();
-            Destroy(collision.gameObject);
-            return;
+            if (collision.tag == "CHANGER")
+            {
+                playerController.ChangeColor();
+                Destroy(collision.gameObject);
+                return;
+            }
+
+            if (collision.tag == "BOTTOM")
+            {
+                GameService.Instance.StopGame?.Invoke();
+                return;
+            }
+            if (collision.tag == "POINT")
+            {
+                GameService.Instance.UIService.GetUIController().IncrementScore();
+                Destroy(collision.gameObject);
+                return;
+            }
         }
-        
-        if(collision.tag=="BOTTOM")
-        {
-            GameService.Instance.StopGame?.Invoke();
-            return;
-        }
-        if (collision.tag == "POINT")
-        {
-            GameService.Instance.UIService.GetUIController().IncrementScore();
-            Destroy(collision.gameObject);
-            return;
-        }
-        if (collision.tag != playerController.GetCurrentTag())
+        else if(playerController.GetCurrentColor().color !=collision.GetComponent<EnemyView>().GetColorData().color)
         {
             playerController.GameOver();
             return;
