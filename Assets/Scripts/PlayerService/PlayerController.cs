@@ -8,7 +8,6 @@ public class PlayerController
 {
     private PlayerView playerView;
     private ColorDataSO colorData;
-    //private PlayerStateMachine playerStateMachine;
     private bool firstJump = true;
     private Rigidbody2D rb2D;
     private SpriteRenderer spriteRenderer;
@@ -20,7 +19,6 @@ public class PlayerController
         GameService.Instance.StartGame += ChangeColor;
         playerView.SetController(this);
         spriteRenderer = playerView.GetSpriteRenderer();
-        //playerStateMachine = new PlayerStateMachine(this);
         rb2D=playerView.gameObject.GetComponent<Rigidbody2D>();
         GameService.Instance.RestartGame += OnGameRestart;
     }
@@ -28,7 +26,6 @@ public class PlayerController
     private void SpawnParticleSystem()
     {
         playerView.GetParticleSystem().GetComponent<ParticleSystem>().Play();
-        //particleTrail = GameObject.Instantiate(playerView.GetParticleSystem(), playerView.gameObject.transform);
     }
 
     public void EnableCanvasGroup()
@@ -40,7 +37,7 @@ public class PlayerController
 
     public void Update()
     {
-        //playerStateMachine.Update();
+
     }
 
     public void PerformJump()
@@ -64,19 +61,12 @@ public class PlayerController
 
     public void ChangeColor()
     {
-        /*
-        int random = UnityEngine.Random.Range(0, playerStateMachine.TotalStates());
-        ColorStates colorState = (ColorStates)random;
-        playerStateMachine.ChangeState(colorState);
-        Debug.Log(playerStateMachine.currentState.tag);
-        spriteRenderer.color = playerStateMachine.currentState.color;*/
         colorData=GameService.Instance.GetRandomColor();
         spriteRenderer.color = colorData.color;
         var mainModule = playerView.GetParticleSystem().GetComponent<ParticleSystem>().main;
         mainModule.startColor = colorData.color;
     }
 
-    //public string GetCurrentTag() => playerStateMachine.currentState.tag;
     public ColorDataSO GetCurrentColor()=> colorData;
 
     public Transform GetPlayerTransform()=>playerView.gameObject.transform;
@@ -95,7 +85,6 @@ public class PlayerController
         rb2D.gravityScale = 0;
         firstJump = true;
         playerView.GetParticleSystem().GetComponent<ParticleSystem>().Stop();
-        //GameObject.Destroy(particleTrail);
         SpawnParticleSystem();
     }
 }
