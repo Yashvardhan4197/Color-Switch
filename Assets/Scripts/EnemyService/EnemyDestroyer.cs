@@ -9,7 +9,7 @@ public class EnemyDestroyer : MonoBehaviour
         {
             Destroy(collision.transform.parent.gameObject);
         }
-        if (collision.tag == "Player")
+        if (collision.GetComponent<PlayerView>() == true)
         {
             GameService.Instance.StopGame?.Invoke();
         }

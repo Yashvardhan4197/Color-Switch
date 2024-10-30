@@ -799,7 +799,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 160053904230257064, guid: 1066d6af42580c24fafef2deeb0382ce, type: 3}
       propertyPath: RotateSpeed
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 566968491036192454, guid: 1066d6af42580c24fafef2deeb0382ce, type: 3}
       propertyPath: m_Pivot.x

@@ -12,27 +12,30 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] EnemySpawnerView enemySpawnerView;
 
     //Services
-    public UIService UIService { get; set;}
-    public PlayerService PlayerService { get; set;}
-    public EnemySpawnerService EnemySpawnerService { get; set;}
+    private UIService uIService;
+    private PlayerService playerService;
+    private EnemySpawnerService enemySpawnerService;
+    public UIService UIService {  get { return uIService; } }
+    public PlayerService PlayerService { get { return playerService; } }
+    public EnemySpawnerService EnemySpawnerService { get { return enemySpawnerService; } }
 
     //Action
     public UnityAction StartGame;
     public UnityAction RestartGame;
     public UnityAction StopGame;
-    public bool gameStarted = false;
+    private bool gameStarted = false;
 
     //Data
-    [SerializeField] public GameObject StartPostion;
+    [SerializeField] GameObject StartPostion;
     [SerializeField] GameObject[] Obstacles;
-    [SerializeField] public GameObject ColorChanger;
+    [SerializeField] GameObject ColorChanger;
     [SerializeField] BoxCollider2D ground;
 
     private void Start()
     {
-        UIService=new UIService(mainMenuView,scoreView, gameOverMenuView);
-        PlayerService=new PlayerService(playerView);
-        EnemySpawnerService = new EnemySpawnerService(enemySpawnerView,Obstacles);
+        uIService=new UIService(mainMenuView,scoreView, gameOverMenuView);
+        playerService=new PlayerService(playerView);
+        enemySpawnerService = new EnemySpawnerService(enemySpawnerView,Obstacles);
         StartGame += OnGameStart;
         RestartGame += OnGameRestart;
         StopGame += OnGameStop;
@@ -42,7 +45,7 @@ public class GameService : GenericMonoSingleton<GameService>
     public void OnGameStart()
     {
         Time.timeScale = 1f;
-        gameStarted = true;
+        GameService.Instance.SetCheckGameStarted(true);
         playerView.gameObject.SetActive(true);
         playerView.gameObject.transform.position = StartPostion.transform.position;
     }
@@ -63,4 +66,12 @@ public class GameService : GenericMonoSingleton<GameService>
     {
         Time.timeScale = 0f;
     }
+
+    public Transform GetStartPosition() => StartPostion.transform;
+
+    public GameObject GetColorChanger() => ColorChanger;
+
+    public bool CheckIfGameStarted() => gameStarted;
+
+    public void SetCheckGameStarted(bool change)=> gameStarted = change;
 }

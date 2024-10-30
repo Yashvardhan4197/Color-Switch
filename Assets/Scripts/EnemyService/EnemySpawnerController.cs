@@ -11,13 +11,13 @@ public class EnemySpawnerController
     private void SpawnObstacles(GameObject obstacle, GameObject obstacle2)
     {
         int place = 1;
-        Object.Instantiate(GameService.Instance.ColorChanger, new Vector3(GameService.Instance.StartPostion.transform.position.x, GameService.Instance.StartPostion.transform.position.y + ((place) * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+        Object.Instantiate(GameService.Instance.GetColorChanger(), new Vector3(GameService.Instance.GetStartPosition().position.x, GameService.Instance.GetStartPosition().transform.position.y + ((place) * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
         place++;
-        Object.Instantiate(obstacle, new Vector3(GameService.Instance.StartPostion.transform.position.x, GameService.Instance.StartPostion.transform.position.y + ((place) * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+        Object.Instantiate(obstacle, new Vector3(GameService.Instance.GetStartPosition().transform.position.x, GameService.Instance.GetStartPosition().transform.position.y + ((place) * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
         place++;
-        Object.Instantiate(GameService.Instance.ColorChanger, new Vector3(GameService.Instance.StartPostion.transform.position.x, GameService.Instance.StartPostion.transform.position.y + ((place) * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+        Object.Instantiate(GameService.Instance.GetColorChanger(), new Vector3(GameService.Instance.GetStartPosition().transform.position.x, GameService.Instance.GetStartPosition().transform.position.y + ((place) * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
         place++;
-        GameObject newObject = Object.Instantiate(obstacle2, new Vector3(GameService.Instance.StartPostion.transform.position.x, GameService.Instance.StartPostion.transform.position.y + ((place) * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+        GameObject newObject = Object.Instantiate(obstacle2, new Vector3(GameService.Instance.GetStartPosition().position.x, GameService.Instance.GetStartPosition().transform.position.y + ((place) * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
         currentTransform = newObject.transform;
     }
 
@@ -51,15 +51,15 @@ public class EnemySpawnerController
         {
             Debug.Log("EnemySpawning");
             int place = 1;
-            Object.Instantiate(GameService.Instance.ColorChanger, new Vector3(GameService.Instance.StartPostion.transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+            Object.Instantiate(GameService.Instance.GetColorChanger(), new Vector3(GameService.Instance.GetStartPosition().transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
             place++;
             int random = Random.Range(0, obstacles.Length);
-            Object.Instantiate(obstacles[random], new Vector3(GameService.Instance.StartPostion.transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+            Object.Instantiate(obstacles[random], new Vector3(GameService.Instance.GetStartPosition().position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
             place++;
-            Object.Instantiate(GameService.Instance.ColorChanger, new Vector3(GameService.Instance.StartPostion.transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+            Object.Instantiate(GameService.Instance.GetColorChanger(), new Vector3(GameService.Instance.GetStartPosition().position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.GetStartPosition().transform.position.z), enemyView.gameObject.transform.rotation);
             place++;
             random = Random.Range(0, obstacles.Length);
-            GameObject newObject = Object.Instantiate(obstacles[random], new Vector3(GameService.Instance.StartPostion.transform.position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.StartPostion.transform.position.z), enemyView.gameObject.transform.rotation);
+            GameObject newObject = Object.Instantiate(obstacles[random], new Vector3(GameService.Instance.GetStartPosition().position.x, currentTransform.position.y + (place * 4.5f), GameService.Instance.GetStartPosition().position.z), enemyView.gameObject.transform.rotation);
             currentTransform = newObject.transform;
             counter+=2;
         }

@@ -17,7 +17,7 @@ public class PlayerView : MonoBehaviour
 
     private void Update()
     {
-        if (GameService.Instance.gameStarted == true)
+        if (GameService.Instance.CheckIfGameStarted()== true)
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0))
             {
