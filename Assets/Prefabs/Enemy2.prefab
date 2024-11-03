@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 1714580632309791343}
   - component: {fileID: 7614455536210499851}
   - component: {fileID: 8046737683085010422}
+  - component: {fileID: 3897324080782340134}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: ENEMY
@@ -252,6 +253,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3897324080782340134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827714226785957751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6246a94377bbed34b8e23cae49ecd2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarScore: {fileID: 9053729004112516040}
 --- !u!1 &5778774721035535216
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,5 +772,10 @@ PrefabInstance:
 --- !u!4 &1084442194720608634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5979960424191411756, guid: 0584167709ea7da46841accc9a178a73, type: 3}
+  m_PrefabInstance: {fileID: 6769367897242769238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9053729004112516040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2329749363511887006, guid: 0584167709ea7da46841accc9a178a73, type: 3}
   m_PrefabInstance: {fileID: 6769367897242769238}
   m_PrefabAsset: {fileID: 0}

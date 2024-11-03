@@ -35,19 +35,14 @@ public class PlayerView : MonoBehaviour
             if (collision.tag == "CHANGER")
             {
                 playerController.ChangeColor();
-                Destroy(collision.gameObject);
+                GameService.Instance.EnemySpawnerService.GetEnemySpawnerController().ReturnColorChangerToPool(collision.gameObject);
                 return;
             }
 
-            if (collision.tag == "BOTTOM")
-            {
-                GameService.Instance.StopGame?.Invoke();
-                return;
-            }
             if (collision.tag == "POINT")
             {
                 GameService.Instance.UIService.GetUIController().IncrementScore();
-                Destroy(collision.gameObject);
+                collision.gameObject.SetActive(false);
                 return;
             }
         }
