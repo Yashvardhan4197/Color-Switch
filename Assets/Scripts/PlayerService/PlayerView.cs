@@ -30,12 +30,12 @@ public class PlayerView : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<EnemyView>()==null)
+        if(collision.gameObject.GetComponent<ObstacleView>()==null)
         {
             if (collision.tag == "CHANGER")
             {
                 playerController.ChangeColor();
-                GameService.Instance.EnemySpawnerService.GetEnemySpawnerController().ReturnColorChangerToPool(collision.gameObject);
+                collision.gameObject.SetActive(false);
                 return;
             }
 
@@ -46,7 +46,7 @@ public class PlayerView : MonoBehaviour
                 return;
             }
         }
-        else if(playerController.GetCurrentColor().color !=collision.GetComponent<EnemyView>().GetColorData().color)
+        else if(playerController.GetCurrentColor().color !=collision.GetComponent<ObstacleView>().GetColorData().color)
         {
             playerController.GameOver();
             return;

@@ -1,5 +1,6 @@
 
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public class GameOverMenuView : MonoBehaviour
     private void OnDestroy()
     {
         GameService.Instance.StopGame -= OpenMenu;
+        UIController.OnDestroy();
     }
 
     private void RestartGame()
@@ -41,4 +43,6 @@ public class GameOverMenuView : MonoBehaviour
     public CanvasGroup GetCanvasGroup() => canvasGroup;
 
     public TextMeshProUGUI GetHighScoreText()=> HighScore;
+
+
 }

@@ -69,7 +69,7 @@ public class UIController
         UpdateHighScore();
     }
 
-    ~UIController()
+    public void OnDestroy()
     {
         GameService.Instance.StartGame -= OnGameStart;
         GameService.Instance.RestartGame -= OnGameStart;
