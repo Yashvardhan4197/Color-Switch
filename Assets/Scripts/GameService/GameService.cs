@@ -9,15 +9,15 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] ScoreView scoreView;
     [SerializeField] PlayerView playerView;
     [SerializeField] GameOverMenuView gameOverMenuView;
-    [SerializeField] ObstacleSpawnerView enemySpawnerView;
+    [SerializeField] ObstacleSpawnerView obstacleSpawnerView;
 
     //Services
     private UIService uIService;
     private PlayerService playerService;
-    private ObstacleSpawnerService enemySpawnerService;
+    private ObstacleSpawnerService obstacleSpawnerService;
     public UIService UIService {  get { return uIService; } }
     public PlayerService PlayerService { get { return playerService; } }
-    public ObstacleSpawnerService EnemySpawnerService { get { return enemySpawnerService; } }
+    public ObstacleSpawnerService ObstacleSpawnerService { get { return obstacleSpawnerService; } }
 
     //Action
     public UnityAction StartGame;
@@ -36,7 +36,7 @@ public class GameService : GenericMonoSingleton<GameService>
     {
         uIService=new UIService(mainMenuView,scoreView, gameOverMenuView);
         playerService=new PlayerService(playerView);
-        enemySpawnerService = new ObstacleSpawnerService(enemySpawnerView,Obstacles);
+        obstacleSpawnerService = new ObstacleSpawnerService(obstacleSpawnerView,Obstacles);
         StartGame += OnGameStart;
         RestartGame += OnGameRestart;
         StopGame += OnGameStop;
