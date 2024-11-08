@@ -66,4 +66,10 @@ public class PlayerView : MonoBehaviour
     public SpriteRenderer GetSpriteRenderer()=> spriteRenderer;
 
     public GameObject GetParticleSystem() => particleTrail;
+
+    private void OnDestroy()
+    {
+        playerController?.OnDisable();
+    }
+    
 }   

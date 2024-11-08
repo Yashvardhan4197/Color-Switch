@@ -11,7 +11,6 @@ public class ObstacleDestroyer : MonoBehaviour
         }
         else if (collision.gameObject.transform?.parent.transform?.parent.GetComponent<ObstacleHolder>()!=null)
         {
-            Debug.Log("I Happened");
             GameService.Instance.ObstacleSpawnerService.GetObstacleSpawnerController().DisableObstacle(collision.gameObject.transform.parent.transform.parent.gameObject);
         }
         

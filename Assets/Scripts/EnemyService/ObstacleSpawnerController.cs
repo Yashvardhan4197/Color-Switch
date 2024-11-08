@@ -1,11 +1,13 @@
 ﻿
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObstacleSpawnerController
 {
     private ObstacleSpawnerView obstacleSpawnerView;
     private GameObject[] obstaclesGameObject;
+    private List<GameObject> InstantiatedObstacles;
     private Transform currentTransform;
     private int counter = 1;
     private float OffsetY = 4.5f;
@@ -16,7 +18,7 @@ public class ObstacleSpawnerController
         this.obstacleSpawnerView = obstacleView;
         obstacleView.SetController(this);
         this.obstaclesGameObject = obstaclesGameObject;
-        //InitializeObstacles();
+        InstantiatedObstacles=new List<GameObject>();
         GameService.Instance.StartGame += OnGameStart;
         GameService.Instance.RestartGame += OnGameStart;
     }
@@ -28,7 +30,8 @@ public class ObstacleSpawnerController
         newGameObject = GetObstaclePooledItem(obstaclePool, objectPrefab);
         newGameObject.gameObject.GetComponent<ObstacleHolder>().EnableObjects();
         newGameObject.transform.position= new Vector3(currentTransform.position.x, currentTransform.position.y+(pos*OffsetY),currentTransform.position.z);
-
+        newGameObject.transform.SetParent(obstacleSpawnerView.transform);
+        InstantiatedObstacles.Add(newGameObject);
         return newGameObject;
     }
 
@@ -44,11 +47,18 @@ public class ObstacleSpawnerController
 
     public void OnGameStart()
     {
+        /*
         GameObject[] ObstaclesToDestroy = GameObject.FindGameObjectsWithTag("ENEMY");
         for (int i=0;i<ObstaclesToDestroy.Length;i++)
         {
             ReturnObstacleToPool(ObstaclesToDestroy[i]);
+        }*/
+
+        for(int i=0;i<InstantiatedObstacles.Count;i++)
+        {
+            ReturnObstacleToPool(InstantiatedObstacles[i]);
         }
+        
         currentTransform = GameService.Instance.GetStartPosition();
         SpawnObstacles();
         counter = 1;

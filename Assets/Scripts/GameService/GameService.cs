@@ -4,33 +4,37 @@ using UnityEngine.Events;
 
 public class GameService : GenericMonoSingleton<GameService>
 {
-    //View
+    #region VIEWS
     [SerializeField] MainMenuView mainMenuView;
     [SerializeField] ScoreView scoreView;
     [SerializeField] PlayerView playerView;
     [SerializeField] GameOverMenuView gameOverMenuView;
     [SerializeField] ObstacleSpawnerView obstacleSpawnerView;
+    #endregion
 
-    //Services
+    # region SERVICES
     private UIService uIService;
     private PlayerService playerService;
     private ObstacleSpawnerService obstacleSpawnerService;
     public UIService UIService {  get { return uIService; } }
     public PlayerService PlayerService { get { return playerService; } }
     public ObstacleSpawnerService ObstacleSpawnerService { get { return obstacleSpawnerService; } }
+    #endregion
 
-    //Action
+    # region ACTION
     public UnityAction StartGame;
     public UnityAction RestartGame;
     public UnityAction StopGame;
     private bool gameStarted = false;
+    #endregion
 
-    //Data
+    #region DATA
     [SerializeField] GameObject StartPostion;
     [SerializeField] GameObject[] Obstacles;
     [SerializeField] GameObject ColorChanger;
     [SerializeField] BoxCollider2D ground;
     [SerializeField] ColorDataSO[] colorDatas;
+    #endregion
 
     private void Start()
     {

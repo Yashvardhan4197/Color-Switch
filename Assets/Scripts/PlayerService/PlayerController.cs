@@ -1,7 +1,4 @@
 ﻿
-
-using System;
-using System.Drawing;
 using UnityEngine;
 
 public class PlayerController
@@ -51,13 +48,13 @@ public class PlayerController
         rb2D.velocity = playerView.GetJumpSpeed() * Vector3.up;
     }
 
-
-    ~PlayerController()
+    public void OnDisable()
     {
         GameService.Instance.StartGame -= EnableCanvasGroup;
-        GameService.Instance.StartGame-= ChangeColor;
+        GameService.Instance.StartGame -= ChangeColor;
         GameService.Instance.RestartGame -= OnGameRestart;
     }
+
 
     public void ChangeColor()
     {
