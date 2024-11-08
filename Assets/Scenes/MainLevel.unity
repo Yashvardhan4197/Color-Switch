@@ -321,7 +321,7 @@ MonoBehaviour:
   scoreView: {fileID: 133320132}
   playerView: {fileID: 490222453}
   gameOverMenuView: {fileID: 16844982}
-  enemySpawnerView: {fileID: 1138750637}
+  obstacleSpawnerView: {fileID: 1138750637}
   StartPostion: {fileID: 1738862638}
   Obstacles:
   - {fileID: 6325884551796268913, guid: 52b6fd854e4df194cbd0cb764b0d2f9e, type: 3}
